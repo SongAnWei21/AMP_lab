@@ -1,0 +1,71 @@
+# GMR → Lab joint name mapping for G1 21-DOF
+#
+# Isaac Lab articulation order (21, LR-paired by joint type):
+#   L_hip_pitch, R_hip_pitch, waist_yaw,
+#   L_hip_roll, R_hip_roll, L_shoulder_pitch, R_shoulder_pitch,
+#   L_hip_yaw, R_hip_yaw, L_shoulder_roll, R_shoulder_roll,
+#   L_knee, R_knee, L_shoulder_yaw, R_shoulder_yaw,
+#   L_ankle_pitch, R_ankle_pitch, L_elbow, R_elbow,
+#   L_ankle_roll, R_ankle_roll
+#
+# GMR order (21, by kinematic chain):
+#   L_leg(6): hip_pitch, hip_roll, hip_yaw, knee, ankle_pitch, ankle_roll
+#   R_leg(6): hip_pitch, hip_roll, hip_yaw, knee, ankle_pitch, ankle_roll
+#   waist_yaw(1)
+#   L_arm(4): shoulder_pitch, shoulder_roll, shoulder_yaw, elbow
+#   R_arm(4): shoulder_pitch, shoulder_roll, shoulder_yaw, elbow
+
+gmr_dof_names:
+  - left_hip_pitch_joint
+  - left_hip_roll_joint
+  - left_hip_yaw_joint
+  - left_knee_joint
+  - left_ankle_pitch_joint
+  - left_ankle_roll_joint
+  - right_hip_pitch_joint
+  - right_hip_roll_joint
+  - right_hip_yaw_joint
+  - right_knee_joint
+  - right_ankle_pitch_joint
+  - right_ankle_roll_joint
+  - waist_yaw_joint
+  - left_shoulder_pitch_joint
+  - left_shoulder_roll_joint
+  - left_shoulder_yaw_joint
+  - left_elbow_joint
+  - right_shoulder_pitch_joint
+  - right_shoulder_roll_joint
+  - right_shoulder_yaw_joint
+  - right_elbow_joint
+
+lab_dof_names:
+  - left_hip_pitch_joint
+  - right_hip_pitch_joint
+  - waist_yaw_joint
+  - left_hip_roll_joint
+  - right_hip_roll_joint
+  - left_shoulder_pitch_joint
+  - right_shoulder_pitch_joint
+  - left_hip_yaw_joint
+  - right_hip_yaw_joint
+  - left_shoulder_roll_joint
+  - right_shoulder_roll_joint
+  - left_knee_joint
+  - right_knee_joint
+  - left_shoulder_yaw_joint
+  - right_shoulder_yaw_joint
+  - left_ankle_pitch_joint
+  - right_ankle_pitch_joint
+  - left_elbow_joint
+  - right_elbow_joint
+  - left_ankle_roll_joint
+  - right_ankle_roll_joint
+
+# Key body links used for AMP observation
+lab_key_body_names:
+  - left_ankle_roll_link
+  - right_ankle_roll_link
+  - left_shoulder_yaw_link
+  - right_shoulder_yaw_link
+  - left_elbow_link
+  - right_elbow_link
