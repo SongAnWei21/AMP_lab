@@ -23,7 +23,7 @@ import torch
 from isaaclab.app import AppLauncher
 
 from legged_lab.utils import task_registry
-from rsl_rl.runners import G1_21DOF_AmpOnPolicyRunner, OnPolicyRunner
+from rsl_rl.runners import G1_21DOF_AmpOnPolicyRunner, G1_29DOF_AmpOnPolicyRunner, G1_Walk_AmpOnPolicyRunner, OnPolicyRunner
 
 # local imports
 import legged_lab.utils.cli_args as cli_args  # isort: skip
@@ -67,7 +67,7 @@ def play():
     env_cfg.scene.num_envs = 50
     env_cfg.scene.env_spacing = 2.5
     env_cfg.commands.rel_standing_envs = 0.0
-    env_cfg.commands.ranges.lin_vel_x = (1.0, 1.0)
+    env_cfg.commands.ranges.lin_vel_x = (0.0, 3.0)
     env_cfg.commands.ranges.lin_vel_y = (0.0, 0.0)
     env_cfg.scene.height_scanner.drift_range = (0.0, 0.0)
 
@@ -97,7 +97,7 @@ def play():
     resume_path = get_checkpoint_path(log_root_path, agent_cfg.load_run, agent_cfg.load_checkpoint)
     log_dir = os.path.dirname(resume_path)
 
-    runner_class: OnPolicyRunner | G1_21DOF_AmpOnPolicyRunner = eval(agent_cfg.runner_class_name)
+    runner_class: OnPolicyRunner | G1_21DOF_AmpOnPolicyRunner | G1_29DOF_AmpOnPolicyRunner | G1_Walk_AmpOnPolicyRunner = eval(agent_cfg.runner_class_name)
     runner = runner_class(env, agent_cfg.to_dict(), log_dir=log_dir, device=agent_cfg.device)
     runner.load(resume_path, load_optimizer=False)
 

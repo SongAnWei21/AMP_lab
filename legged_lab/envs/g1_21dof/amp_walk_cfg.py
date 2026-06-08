@@ -363,9 +363,10 @@ class G1_21DOF_AMP_WalkAgentCfg(RslRlOnPolicyRunnerCfg):
     # --- AMP参数 ---
     amp_reward_coef = 1.0 #1.0
     amp_motion_files = [
-        "legged_lab/datasets/g1_21dof/walk_csv/Side_step_left_poses.csv",
-        "legged_lab/datasets/g1_21dof/walk_csv/Side_step_right_poses.csv",
-        "legged_lab/datasets/g1_21dof/walk_csv/Walk_turn_change_poses.csv",
+        # "legged_lab/datasets/g1_21dof/walk_csv/Side_step_left_poses.csv",
+        # "legged_lab/datasets/g1_21dof/walk_csv/Side_step_right_poses.csv",
+        # "legged_lab/datasets/g1_21dof/walk_csv/Walk_turn_change_poses.csv",
+        "legged_lab/datasets/g1_21dof/locomotion_csv/locomotion_50hz.csv",
     ]
     amp_num_preload_transitions = 200000
     amp_task_reward_lerp = 0.9  #0.9

@@ -1,0 +1,94 @@
+# GMR → Lab joint name mapping for G1 29-DOF
+#
+# Isaac Lab articulation order (29, LR-paired by joint type):
+#   L_hip_pitch, R_hip_pitch, waist_yaw,
+#   L_hip_roll, R_hip_roll, waist_roll,
+#   L_hip_yaw, R_hip_yaw, waist_pitch,
+#   L_knee, R_knee,
+#   L_shoulder_pitch, R_shoulder_pitch,
+#   L_ankle_pitch, R_ankle_pitch,
+#   L_shoulder_roll, R_shoulder_roll,
+#   L_ankle_roll, R_ankle_roll,
+#   L_shoulder_yaw, R_shoulder_yaw,
+#   L_elbow, R_elbow,
+#   L_wrist_roll, R_wrist_roll,
+#   L_wrist_pitch, R_wrist_pitch,
+#   L_wrist_yaw, R_wrist_yaw
+#
+# GMR order (29, by kinematic chain):
+#   L_leg(6):  hip_pitch, hip_roll, hip_yaw, knee, ankle_pitch, ankle_roll
+#   R_leg(6):  hip_pitch, hip_roll, hip_yaw, knee, ankle_pitch, ankle_roll
+#   waist(3):  waist_yaw, waist_roll, waist_pitch
+#   L_arm(7):  shoulder_pitch, shoulder_roll, shoulder_yaw, elbow, wrist_roll, wrist_pitch, wrist_yaw
+#   R_arm(7):  shoulder_pitch, shoulder_roll, shoulder_yaw, elbow, wrist_roll, wrist_pitch, wrist_yaw
+
+gmr_dof_names:
+  - left_hip_pitch_joint
+  - left_hip_roll_joint
+  - left_hip_yaw_joint
+  - left_knee_joint
+  - left_ankle_pitch_joint
+  - left_ankle_roll_joint
+  - right_hip_pitch_joint
+  - right_hip_roll_joint
+  - right_hip_yaw_joint
+  - right_knee_joint
+  - right_ankle_pitch_joint
+  - right_ankle_roll_joint
+  - waist_yaw_joint
+  - waist_roll_joint
+  - waist_pitch_joint
+  - left_shoulder_pitch_joint
+  - left_shoulder_roll_joint
+  - left_shoulder_yaw_joint
+  - left_elbow_joint
+  - left_wrist_roll_joint
+  - left_wrist_pitch_joint
+  - left_wrist_yaw_joint
+  - right_shoulder_pitch_joint
+  - right_shoulder_roll_joint
+  - right_shoulder_yaw_joint
+  - right_elbow_joint
+  - right_wrist_roll_joint
+  - right_wrist_pitch_joint
+  - right_wrist_yaw_joint
+
+lab_dof_names:
+  - left_hip_pitch_joint
+  - right_hip_pitch_joint
+  - waist_yaw_joint
+  - left_hip_roll_joint
+  - right_hip_roll_joint
+  - waist_roll_joint
+  - left_hip_yaw_joint
+  - right_hip_yaw_joint
+  - waist_pitch_joint
+  - left_knee_joint
+  - right_knee_joint
+  - left_shoulder_pitch_joint
+  - right_shoulder_pitch_joint
+  - left_ankle_pitch_joint
+  - right_ankle_pitch_joint
+  - left_shoulder_roll_joint
+  - right_shoulder_roll_joint
+  - left_ankle_roll_joint
+  - right_ankle_roll_joint
+  - left_shoulder_yaw_joint
+  - right_shoulder_yaw_joint
+  - left_elbow_joint
+  - right_elbow_joint
+  - left_wrist_roll_joint
+  - right_wrist_roll_joint
+  - left_wrist_pitch_joint
+  - right_wrist_pitch_joint
+  - left_wrist_yaw_joint
+  - right_wrist_yaw_joint
+
+# Key body links used for AMP observation
+lab_key_body_names:
+  - left_ankle_roll_link
+  - right_ankle_roll_link
+  - left_shoulder_yaw_link
+  - right_shoulder_yaw_link
+  - left_wrist_yaw_link
+  - right_wrist_yaw_link

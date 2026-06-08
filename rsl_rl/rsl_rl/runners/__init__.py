@@ -19,6 +19,8 @@
 """Implementation of runners for environment-agent interaction."""
 
 from .g1_21dof_amp_on_policy_runner import G1_21DOF_AmpOnPolicyRunner
+from .g1_29dof_amp_on_policy_runner import G1_29DOF_AmpOnPolicyRunner
+from .g1_walk_amp_on_policy_runner import G1_Walk_AmpOnPolicyRunner
 from .on_policy_runner import OnPolicyRunner
 
-__all__ = ["OnPolicyRunner", "G1_21DOF_AmpOnPolicyRunner"]
+__all__ = ["OnPolicyRunner", "G1_21DOF_AmpOnPolicyRunner", "G1_29DOF_AmpOnPolicyRunner", "G1_Walk_AmpOnPolicyRunner"]

@@ -4,6 +4,7 @@
 """Helper functions."""
 
 from .g1_21dof_motion_loader import G1_21DOF_AMPLoader
+from .g1_29dof_motion_loader import G1_29DOF_AMPLoader
 from .utils import (
     Normalizer,
     resolve_nn_activation,
@@ -13,4 +14,4 @@ from .utils import (
     unpad_trajectories,
 )
 
-__all__ = ["G1_21DOF_AMPLoader"]
+__all__ = ["G1_21DOF_AMPLoader", "G1_29DOF_AMPLoader"]
